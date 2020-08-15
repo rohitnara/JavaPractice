@@ -33,8 +33,8 @@ public class stackExample {
 /*		while(!s.isEmpty()){
 			System.out.print(s.pop()+ " ");
 		}*/
-		for(Object obj:s){
-			System.out.print(obj+" ");
+		for(Integer i:s){
+			System.out.print(i+" ");
 		}
 		System.out.println();
 		a.print(s);

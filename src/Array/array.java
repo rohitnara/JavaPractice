@@ -16,9 +16,9 @@ public class array {
 		String []s1=new String[n];
 		float f1[]=new float[n];
 		double d1[]=new double[n];*/
-		int []a2={6,4,2,8,4,0,1,5,3};
-		char[] c2={'d','c','b','a','g'};
-		String s2[]={"Ram","Shyam","Xohan","Rohit","papya"};
+		Integer []a2={6,4,2,8,4,0,1,5,3};
+		Character[] c2={'d','c','b','a','g'};
+		String s2[]={"Ram","Shyam","Mohan","Raat","P"};
 		float f2[]={8.0f,2f,6f,1f,3f};
 		double d2[]={7.0,4,2,1,6};
 		//System.out.println(a2.length+" "+" "+s2.length+" "+" "+c2.length);
@@ -61,8 +61,9 @@ public class array {
 		//Arrays.sort(a2);
 		Arrays.sort(c2);
 		Arrays.sort(s2);
-		Arrays.sort(f2);
+		Arrays.sort(f2);//work for int[]
 		Arrays.sort(d2);
+		Arrays.sort(c2, Collections.reverseOrder());// it will work for Integer[] not int[]
 		for  (int i=0;i<a2.length;i++){
 			System.out.print(a2[i]);
 		}
@@ -97,8 +98,20 @@ public class array {
 		for  (int i=0;i<a2.length;i++){
 			//System.out.print(a2[i]);
 		}
-		
+		Arrays.sort(s2,(x,y)->y.length()-x.length()==0 ?y.compareTo(x):y.length()-x.length());
+		Arrays.sort(s2,(x,y)->y.compareTo(x));
+		System.out.println();
+		for  (int i=0;i<s2.length;i++){
+			System.out.print(s2[i] + " ");
+		}
+		System.out.println();
+		Arrays.sort(a2, (x,y)->x-y);
+		for  (int i=0;i<a2.length;i++){
+			System.out.print(a2[i]+" ");
+		}
+		System.out.println();
 	
 	}
-
+	//all heap comparator applicable if Integer[]/String[] not int[]
+	//In case of int[] we can apply Arrays.sort(a),Arrays.sort(a,1,4), Arrays.binarySearch(10)
 }

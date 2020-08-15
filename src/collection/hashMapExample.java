@@ -34,6 +34,7 @@ public class hashMapExample {
 		 	System.out.println(m);
 		 	m.values().remove("Rohit");
 		 	System.out.println(m);
+		 	m.put(100, m.getOrDefault(1, "hello"));
 	}
 
 }

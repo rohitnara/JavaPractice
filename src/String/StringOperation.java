@@ -24,7 +24,32 @@ public class StringOperation {
 		//System.out.println(st.substring(5));
 		//st=st.trim();
 		System.out.println(st);
-
+		String str = "    hel l  o   ";
+		str = str.trim();
+		System.out.println(str);
+		str = str.replaceAll("\\s+","");//do trim before split
+		System.out.println(str);
+		str = str.replaceAll("l","k");
+		System.out.println(str);
+		System.out.println(str.contains("h"));
+		System.out.println(str.contains("ek"));
+		System.out.println(str.contains("xy"));
+		System.out.println(str.startsWith("h"));
+		System.out.println(str.startsWith("he"));
+		System.out.println(str.startsWith("hk"));
+		System.out.println(str.endsWith("o"));
+		System.out.println(str.endsWith("ko"));
+		System.out.println(str.endsWith("xy"));
+		System.out.println(str.indexOf("k"));
+		System.out.println(str.indexOf("he"));
+		System.out.println(str.lastIndexOf("k"));
+		System.out.println(str.lastIndexOf("ko"));
+		System.out.println(str.lastIndexOf("oo"));
+		String str1 = "he he hi hi";
+		String[] str2 = str1.split(" ");//do trim before split
+		for(String s1: str2) {
+			System.out.println(s1);
+		}
 	}
 
 }

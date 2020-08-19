@@ -24,7 +24,7 @@ public class StringOperation {
 		//System.out.println(st.substring(5));
 		//st=st.trim();
 		System.out.println(st);
-		String str = "    hel l  o   ";
+		String str = "    1hel l  o   ";
 		str = str.trim();
 		System.out.println(str);
 		str = str.replaceAll("\\s+","");//do trim before split
@@ -50,6 +50,16 @@ public class StringOperation {
 		for(String s1: str2) {
 			System.out.println(s1);
 		}
+		//check a character is lowercase or uppercase
+		System.out.println((str.charAt(0)>='a'&&str.charAt(0)<='z')||(str.charAt(0)>='A'&&str.charAt(0)<='Z'));
+		System.out.println(str);
+		/*concept:
+		1. only + works with character ie str.charAt(0) however toUpperCase() etc won't work
+		for this we need to change String.valueOf(str.charAt(0)).toUpperCase()
+		String s="a";
+		s=s.substring(1)-->""
+		s=s.substring(2)-->StringIndexOutOfBound exception
+		 */
 	}
 
 }

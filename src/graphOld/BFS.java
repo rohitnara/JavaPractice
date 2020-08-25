@@ -1,12 +1,11 @@
-package graph;
+package graphOld;
 import java.util.*;
-import java.io.*;
 import java.lang.*;
 
-public class DFS {
+public class BFS {
 	int v;
 	LinkedList<Integer> l[];
-	DFS(int n){
+	BFS(int n){
 		v=n;
 		l=new LinkedList[v];
 		for(int i=0;i<v;i++){
@@ -25,33 +24,28 @@ public class DFS {
 			System.out.println();
 		}
 	}
-	void DFSPrint(int start){
-		Stack<Integer> s=new Stack<>();
+	void BFSFind(int start){
+		Queue<Integer> q=new LinkedList<>();
 		int vis[]=new int[v];
 		Arrays.fill(vis,0);
-		s.push(start);
-		System.out.println(start);
+		q.add(start);
 		vis[start]=1;
-		while(s.size()!=0){
-			int x=s.peek();
-			int count=0;
-			for(Integer obj:l[x]){
+		while(q.size()!=0){
+			int k=q.peek();
+			System.out.println(q.remove());
+			for(Integer obj:l[k]){
 				if(vis[obj]==0){
-					System.out.println(obj);
-					s.push(obj);
-					vis[obj]=1;
-					count++;
-					break;
+				q.add(obj);
+				vis[obj]=1;
 				}
 			}
-			if(count==0){
-				s.pop();
-			}
 		}
+		
 	}
 
 	public static void main(String[] args) {
-		DFS d=new DFS(5);
+		BFS d=new BFS(5);
+		//directed graph
 		/*d.addEdge(0,1);
 		d.addEdge(0,2);
 		d.addEdge(0,3);
@@ -62,6 +56,7 @@ public class DFS {
 		d.addEdge(4,1);
 		d.addEdge(1,5);
 		d.addEdge(2,6);*/
+		//undirected graph
 		d.addEdge(0,1);
 		d.addEdge(0,2);
 		d.addEdge(1,0);
@@ -74,8 +69,9 @@ public class DFS {
 		d.addEdge(3,1);
 		d.addEdge(3,2);
 		d.addEdge(4,2);
+		
 		d.print();
-		d.DFSPrint(0);
+		d.BFSFind(1);
 
 	}
 

@@ -5,7 +5,7 @@ import java.lang.*;
 import java.io.*;
 
 class PrintAllPathInGrid {
-    static int count=0;
+    //static int count=0;
     public static void main (String[] args) {
         Scanner sc = new Scanner(System.in);
         int t =sc.nextInt();
@@ -20,13 +20,13 @@ class PrintAllPathInGrid {
             }
             String op= String.valueOf(a[0][0]);
             print(a,0,0,op,m,n);
-            System.out.println(count);
-            count=0;
+            //System.out.println(count);
+            //count=0;
         }
     }
     static void print(char[][] a, int i,int j,String op,int m,int n){
         if(i==m-1&&j==n-1){
-            count++;
+            //count++;
             System.out.println(op);
             return;
         }

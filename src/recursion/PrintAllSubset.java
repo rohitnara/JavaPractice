@@ -5,7 +5,7 @@ import java.util.*;
 public class PrintAllSubset {
     public static void main(String[] args){
         Set<String> l = new TreeSet<>();
-        String s="abc";
+        String s="23";
         String in = s;
         String op = "";
         if(s==null){

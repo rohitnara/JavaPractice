@@ -1,5 +1,6 @@
 package backtracking;
-
+//time complexity O(2^(n^2))
+//space O(n^2)
 public class RatMaze {
     public static void main(String args[]){
         int maze[][]={

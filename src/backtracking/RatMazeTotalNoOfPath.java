@@ -16,7 +16,7 @@ public class RatMazeTotalNoOfPath {
     public static void main(String args[]){
         int maze[][]={
                 {1, 1, 1, 1},
-                {1, 1, 1, 1},
+                {0, 1, 1, 1},
                 {1, 1, 1, 1},
                 {1, 1, 1, 1}
         };
@@ -30,7 +30,7 @@ public class RatMazeTotalNoOfPath {
     private static void bfs(int i,int j, int[][] maze, int m,int n){
         Queue<Dist> q= new LinkedList<>();
         if(!isSafe(i,j,maze,m,n)){
-            System.out.print(0);
+            //System.out.print(0);
             return;
         }
         q.add(new Dist(i,j));

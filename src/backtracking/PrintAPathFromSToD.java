@@ -1,7 +1,7 @@
 package backtracking;
 
 import java.util.Arrays;
-
+//time O(4^n^2)
 public class PrintAPathFromSToD {
     public static void main(String args[]){
         int maze[][]={

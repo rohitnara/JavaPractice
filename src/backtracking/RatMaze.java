@@ -5,8 +5,8 @@ public class RatMaze {
     public static void main(String args[]){
         int maze[][]={
                 {1, 0, 1, 0},
-                {1, 1, 1, 1},
-                {0, 1, 0, 1},
+                {1, 1, 1, 0},
+                {0, 1, 1, 1},
                 {1, 1, 0, 1}
         };
         if(maze.length==0){
@@ -37,7 +37,7 @@ public class RatMaze {
                 return true;
             }
             res[i][j]=0;
-            return false;
+            //return false;
         }
         return false;
     }

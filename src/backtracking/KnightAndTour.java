@@ -15,7 +15,11 @@ public class KnightAndTour {
     }
 
     private static boolean solve(int n, int[][] res,int val, int i, int j) {
-        if(val==n*n+1){
+        if(i<0||i>=n||j<0||j>=n||res[i][j]>0){
+            return false;
+        }
+        if(val==n*n){
+            res[i][j]=n*n;
             return true;
         }
         if(isSafe(n,i,j,res)){

@@ -41,13 +41,24 @@ public class PrintDfs {
         }
     }
 
-    private static void printAllPath(int src, List<Graph>[] g, int n, boolean[] vis) {
+/*    private static void printAllPath(int src, List<Graph>[] g, int n, boolean[] vis) {
         System.out.println(src);
         vis[src]=true;
         for(Graph l:g[src]){
             if(!vis[l.nbr]){
                 printAllPath(l.nbr,g,n,vis);
             }
+        }
+    }*/
+
+    private static void printAllPath(int src, List<Graph>[] g, int n, boolean[] vis) {
+        if(vis[src]){
+            return;
+        }
+        System.out.println(src);
+        vis[src]=true;
+        for(Graph l:g[src]){
+            printAllPath(l.nbr,g,n,vis);
         }
     }
 

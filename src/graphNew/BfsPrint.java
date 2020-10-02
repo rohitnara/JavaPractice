@@ -49,7 +49,9 @@ public class BfsPrint {
             vis[p]=true;
             System.out.print(p);
             for(Graph i: g[p]){
-                q.add(i.nbr);
+                if(!vis[i.nbr]) {
+                    q.add(i.nbr);
+                }
             }
         }
     }
